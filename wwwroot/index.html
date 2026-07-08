@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pharmacy Expiry Alerts System - Login</title>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="left-panel">
+            <div class="pill-icon">💊</div>
+            <h1>PHARMACY<br>EXPIRY ALERTS<br>SYSTEM</h1>
+            <p class="tagline">Smart Inventory.<br>Timely Alerts. Better Care.</p>
+        </div>
+        <div class="right-panel">
+            <div class="logo-circle">💊</div>
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Sign in to continue to your account</p>
+
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required />
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required />
+
+                <div class="options-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" /> Remember me
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="sign-in-btn">Sign In</button>
+            </form>
+
+            <p class="signup-text">Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'Dashboard.html';
+        });
+    </script>  
+</body>
+</html>
