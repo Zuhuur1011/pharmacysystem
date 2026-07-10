@@ -8,6 +8,8 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=pharmacy.db"));
 
 var app = builder.Build();
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
 
