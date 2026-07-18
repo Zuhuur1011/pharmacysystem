@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pharmacy Expiry Alerts System - Settings</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="pill-icon">💊</span>
+                <h2>PHARMACY<br>EXPIRY ALERTS<br>SYSTEM</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="Dashboard.html" class="nav-item">🏠 Dashboard</a>
+                <a href="Inventory.html" class="nav-item">📦 Inventory</a>
+                <a href="Alerts.html" class="nav-item">🔔 Alerts</a>
+                <a href="Reports.html" class="nav-item">📊 Reports</a>
+                <a href="Settings.html" class="nav-item active">⚙️ Settings</a>
+                <a href="Users.html" class="nav-item">👥 Users</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>🛡️ Smart Inventory.<br>Timely Alerts.<br>Better Care.</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Settings</h1>
+                    <p class="subtitle">Configure your alert preferences</p>
+                </div>
+            </header>
+
+            <section class="panel">
+                <div class="panel-header"><h3>Alert Preferences</h3></div>
+                <form id="settingsForm" style="padding: 10px 0;">
+                    <label style="display:block; margin-bottom:8px; color:#0D1B2A; font-size:13px;">
+                        Alert me when medicine expires within:
+                    </label>
+                    <select id="alertDays" style="padding:10px; border-radius:6px; border:1px solid #6B7280; width:200px;">
+                        <option value="7">7 days</option>
+                        <option value="15">15 days</option>
+                        <option value="30" selected>30 days</option>
+                        <option value="60">60 days</option>
+                    </select>
+                    <br /><br />
+                    <label style="display:block; margin-bottom:8px; color:#0D1B2A; font-size:13px;">
+                        Low stock threshold:
+                    </label>
+                    <input type="number" id="stockThreshold" value="20" style="padding:10px; border-radius:6px; border:1px solid #6B7280; width:180px;" />
+                    <br /><br />
+                    <button type="submit" class="add-btn">Save Settings</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('settingsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Settings saved! (Note: this is a demo — settings are not yet stored permanently.)');
+        });
+    </script>
+</body>
+</html>

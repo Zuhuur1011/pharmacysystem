@@ -48,6 +48,14 @@
         document.getElementById('expiringSoon').textContent = expiringSoon;
         document.getElementById('expiredItems').textContent = expired;
         document.getElementById('totalValue').textContent = '$' + (medicines.length * 10);
+        const badge = document.getElementById('alertBadge');
+        const alertCount = expiringSoon + expired;
+        if (alertCount > 0) {
+            badge.textContent = alertCount;
+            badge.style.display = 'flex';
+        } else {
+            badge.style.display = 'none';
+        }
     } catch (error) {
         console.error('Error loading medicines:', error);
         document.getElementById('medicinesTableBody').innerHTML = '<tr><td colspan="5">Failed to load medicines.</td></tr>';
