@@ -1,0 +1,101 @@
+﻿.add-btn {
+    background-color: #1565C0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .add-btn:hover {
+        background-color: #0D47A1;
+    }
+
+.action-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.edit-btn {
+    color: #1565C0;
+}
+
+.delete-btn {
+    color: #C62828;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-box {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 400px;
+}
+
+    .modal-box h2 {
+        color: #0D1B2A;
+        margin-bottom: 20px;
+    }
+
+    .modal-box label {
+        font-size: 13px;
+        color: #0D1B2A;
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 5px;
+    }
+
+    .modal-box input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #6B7280;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.cancel-btn {
+    background: #E3F2FD;
+    color: #0D1B2A;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #1565C0;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .save-btn:hover {
+        background: #0D47A1;
+    }

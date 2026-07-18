@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pharmacy Expiry Alerts System - Alerts</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="pill-icon">💊</span>
+                <h2>PHARMACY<br>EXPIRY ALERTS<br>SYSTEM</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="Dashboard.html" class="nav-item">🏠 Dashboard</a>
+                <a href="Inventory.html" class="nav-item">📦 Inventory</a>
+                <a href="Alerts.html" class="nav-item active">🔔 Alerts</a>
+                <a href="Reports.html" class="nav-item">📊 Reports</a>
+                <a href="#" class="nav-item">⚙️ Settings</a>
+                <a href="#" class="nav-item">👥 Users</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>🛡️ Smart Inventory.<br>Timely Alerts.<br>Better Care.</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Alerts</h1>
+                    <p class="subtitle">Medicines expiring soon or already expired</p>
+                </div>
+            </header>
+
+            <section class="panel">
+                <div class="panel-header"><h3>Expired</h3></div>
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Batch No.</th><th>Qty</th><th>Expiry Date</th></tr>
+                    </thead>
+                    <tbody id="expiredTableBody">
+                        <tr><td colspan="4">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="panel" style="margin-top:20px;">
+                <div class="panel-header"><h3>Expiring Within 30 Days</h3></div>
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Batch No.</th><th>Qty</th><th>Expiry Date</th></tr>
+                    </thead>
+                    <tbody id="expiringTableBody">
+                        <tr><td colspan="4">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/alerts.js"></script>
+</body>
+</html>

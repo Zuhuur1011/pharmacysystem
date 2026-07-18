@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Pharmacy Expiry Alerts System - Reports</title>
+    <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <span class="pill-icon">💊</span>
+                <h2>PHARMACY<br>EXPIRY ALERTS<br>SYSTEM</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="Dashboard.html" class="nav-item">🏠 Dashboard</a>
+                <a href="Inventory.html" class="nav-item">📦 Inventory</a>
+                <a href="Alerts.html" class="nav-item">🔔 Alerts</a>
+                <a href="Reports.html" class="nav-item active">📊 Reports</a>
+                <a href="#" class="nav-item">⚙️ Settings</a>
+                <a href="#" class="nav-item">👥 Users</a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>🛡️ Smart Inventory.<br>Timely Alerts.<br>Better Care.</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <h1>Reports</h1>
+                    <p class="subtitle">Summary of your pharmacy inventory</p>
+                </div>
+            </header>
+
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">📋</div>
+                    <div>
+                        <p class="stat-label">Total Items</p>
+                        <h2 id="repTotal">0</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">✅</div>
+                    <div>
+                        <p class="stat-label">Good Condition</p>
+                        <h2 id="repGood">0</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon orange">⚠️</div>
+                    <div>
+                        <p class="stat-label">Expiring Soon</p>
+                        <h2 id="repExpiring">0</h2>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red">❌</div>
+                    <div>
+                        <p class="stat-label">Expired</p>
+                        <h2 id="repExpired">0</h2>
+                    </div>
+                </div>
+            </section>
+
+            <section class="panel">
+                <div class="panel-header"><h3>Low Stock Items (Qty under 20)</h3></div>
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>Batch No.</th><th>Qty</th><th>Expiry Date</th></tr>
+                    </thead>
+                    <tbody id="lowStockTableBody">
+                        <tr><td colspan="4">Loading...</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/reports.js"></script>
+</body>
+</html>
