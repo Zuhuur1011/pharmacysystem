@@ -6,8 +6,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite("Data Source=pharmacy.db"));
+builder.Services.AddScoped<pharmacyproject.Services.EmailService>();
 
-var app = builder.Build();
+var app = builder.Build(); 
 app.UseDefaultFiles();
 app.UseStaticFiles();
 

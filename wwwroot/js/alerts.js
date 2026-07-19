@@ -42,3 +42,19 @@ function renderTable(tbodyId, list, className) {
 }
 
 loadAlerts();
+async function sendAlertEmail() {
+    const email = document.getElementById('alertEmailInput').value;
+    if (!email) {
+        alert('Please enter an email address.');
+        return;
+    }
+
+    try {
+        const response = await fetch(`/api/alerts/send-expiry-email?toEmail=${encodeURIComponent(email)}`, { method: 'POST' });
+        const data = await response.json();
+        alert(data.message);
+    } catch (error) {
+        alert('Failed to send email. Please try again.');
+        console.error(error);
+    }
+}
